@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonController!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+
+    {% if editMode == false %}
+    <h1> Ajouter Personne  </h1>
+    {% else %}
+    <h1> Editer Personne  </h1>
+     {% endif %}
+ 
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    
+</div>
+{% endblock %}

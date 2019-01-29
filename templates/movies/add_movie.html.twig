@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MovieController!{% endblock %}
+{% block body %}
+
+
+<div class="example-wrapper">
+
+    {% if editMode == false %}
+    <h1> Ajouter Movie  </h1>
+    {% else %}
+    <h1> Editer Movie   </h1>
+     {% endif %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+
+{% if movies is defined %}
+<h1>lists des films</h1>
+<table>
+<tr>
+    <td><h3>Titre</h3></td>
+    <td><h3>Date de sortie</h3></td>
+    <td><h3>Afficher en détail</h3></td>
+</tr>
+    {% for film in movies %}
+        <tr>
+            <td>{{ film.titre }} </td>
+            <td>{{ film.dateAt|date('d/m/Y', "Europe/Paris") }} </td>
+            <td><a href="" > Afficher </a></td>
+        </tr>
+    {% endfor %}
+
+<table>
+{% endif %}
+
